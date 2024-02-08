@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+.background-div{
+    min-height: 100vh;
+    width: 100%;
+    background-color: yellow;
+}
+
+.main-div{
+    margin-left: 400px;
+    padding-top: 100px;
+    width: 500px;
+}
+
+
+.playing-div{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    
+    
+}
+
+.img-area{
+    width: 250px;
+}
+
+.img-area img{
+    width: 200px;
+    height: 120px;
+}
+
+
+
+#text{
+    text-align: center;
+}
+

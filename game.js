@@ -23,6 +23,23 @@ const hand_change = () => {
 }
 
 
+const scores_counting = () => {
+
+    console.log("Scores Counting")
+}
+
+
+const game_play = () => {
+
+    console.log("Game Playing")
+}
+
+
+
+
+
+
+
 
 
 
