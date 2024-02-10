@@ -28,7 +28,14 @@ let play_btn = document.getElementById("play")
 
 const scissor_left_control = () => {
 
+
     console.log("Scissor Player 1 Control")
+
+    let scissor_left = "Scisssor"
+
+    player_area_1.src = "Images/Scissor_Left.png"
+
+    return scissor_left
 
     
 }
@@ -36,7 +43,14 @@ const scissor_left_control = () => {
 
 const rock_left_control = () => {
 
+    let rock_left = "Rock"
+
+
+    player_area_1.src = "Images/Rock_Left.png"
+
     console.log("Rock Player 1 Control")
+
+    return rock_left
 }
 
 
@@ -44,6 +58,12 @@ const rock_left_control = () => {
 const paper_left_control = () => {
 
     console.log("Paper Player 1 Control")
+
+    player_area_1.src = "Images/Paper_Left.png"
+
+    let paper_left = "Paper"
+
+    return paper_left
 }
 
 
@@ -55,13 +75,25 @@ paper_left.addEventListener("click", paper_left_control)
 
 const scissor_right_control = () => {
 
+    let scissor_right = "Scissor"
+
     console.log("Scissor Player 2 Control")
+
+    player_area_2.src = "Images/Scissor_Right.png"
+
+    return scissor_right
 }
 
 
 const rock_right_control = () => {
 
+    let rock_right = "Rock"
+
     console.log("Rock Player 2 Control")
+
+    player_area_2.src = "Images/Rock_Right.png"
+
+    return rock_right
 }
 
 
@@ -69,6 +101,13 @@ const rock_right_control = () => {
 const paper_right_control = () => {
 
     console.log("Paper Player 2 Control")
+
+    let paper_right = "Paper"
+
+
+    player_area_2.src = "Images/Paper_Right.png"
+
+    return paper_right
 }
 
 scissor_right.addEventListener("click", scissor_right_control)
@@ -98,24 +137,51 @@ const game_play = () => {
 }
 
 
-const matching_player_answers = () => {
-
-
-    console.log("Matching Answers..")
-}
 
 
 
-const play_game = () => {
+
+const start_play_game = () => {
 
     console.log("Game Started")
     start_status.textContent = "Game Started.!!"
 
+    //matching_player_answers()
     
 }
 
+let random_choice_array = ["Rock", "Paper", "Scissor"]
 
-play_btn.addEventListener("click", play_game)
+
+const matching_player_answers = () => {
+
+
+    console.log("Matching Answers..")
+
+    if(paper_left_control() == paper_right_control()){
+        console.log("Match Draw")
+    }else if(paper_left_control() != paper_right_control()){
+        console.log("Player 2 Won")
+    }
+
+
+    //let random_index_value  = Math.floor(Math.random() * 3)
+
+
+    //console.log(random_index_value)
+
+    
+
+
+}
+
+//make two mods (algorithms) one for online users one for normal 2 players
+//in normal 2 player mode we need to implement the random patterns like if first player move scissor we need to take another rock or paper
+
+
+
+
+play_btn.addEventListener("click", start_play_game)
 
 
 
